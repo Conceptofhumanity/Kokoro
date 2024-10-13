@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    font-family: Cinzel, serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    Color: rgb(255, 255, 255);
+    text-align: left;
+    margin-top: 50px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin : 20px auto;
+    text-align: left;
+}
+
+.btn {
+background-color: rgb(61, 57, 61);
+ color: rgb(255, 255, 255);
+ padding: 10px 20px;
+ border: ghostwhite;
+ border-radius: 5px;
+ text-decoration:oklab(from color l a b);
+ font-size: 16px;
+}
+
+.btn:hover {
+    background-color: rgb(0, 0, 0)
+}
