@@ -34,3 +34,41 @@ background-color: rgb(61, 57, 61);
 .first-btn:hover {
     background-color: rgb(0, 0, 0)
 }
+
+
+.body2 {
+    background-color: 1c083e;
+    font-family: Cinzel, serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header2 {
+    Color: rgb(255, 255, 255);
+    text-align: left;
+    margin-top: 50px;
+}
+
+.paragraph2 {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.btn2 {
+background-color: 1c083e;
+ color: rgb(255, 255, 255);
+ padding: 10px 20px;
+ border: ghostwhite;
+ border-radius: 5px;
+ text-decoration:oklab(from color l a b);
+ font-size: 16px;
+}
+
+.btn2:hover {
+    background-color: rgb(0, 0, 0)
+}
