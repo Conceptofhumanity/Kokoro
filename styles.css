@@ -38,20 +38,20 @@ background-color: rgb(61, 57, 61);
 
 .body2 {
     background-color: 1c083e;
-    font-family: Cinzel, serif;
+    font-family: Matemasie, serif;
     color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
 .header2 {
-    Color: rgb(255, 255, 255);
+    Color: rgb(200, 140, 170);
     text-align: left;
     margin-top: 50px;
 }
 
 .paragraph2 {
-    color: rgb(255, 255, 255);
+    color: rgb(200, 140, 170);
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
@@ -61,7 +61,7 @@ background-color: rgb(61, 57, 61);
 
 .btn2 {
 background-color: 1c083e;
- color: rgb(255, 255, 255);
+ color: rgb(100, 0, 0);
  padding: 10px 20px;
  border: ghostwhite;
  border-radius: 5px;
@@ -70,5 +70,42 @@ background-color: 1c083e;
 }
 
 .btn2:hover {
+    background-color: rgb(0, 0, 0)
+}
+
+.body3 {
+    background-color: green;
+    font-family: Matemasie, serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header3 {
+    Color: rgb(200, 140, 170);
+    text-align: left;
+    margin-top: 50px;
+}
+
+.paragraph3 {
+    color: rgb(200, 140, 170);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.btn3 {
+background-color: green;
+ color: rgb(200, 140, 170);
+ padding: 10px 20px;
+ border: ghostwhite;
+ border-radius: 5px;
+ text-decoration:oklab(from color l a b);
+ font-size: 16px;
+}
+
+.btn3:hover {
     background-color: rgb(0, 0, 0)
 }
