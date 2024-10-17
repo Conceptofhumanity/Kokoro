@@ -34,4 +34,8 @@ function revealCell() {
     }
 }
 
+function win() {
+    cells.classList.removeAll
+    alert("you win.")
+
 createGrid();
