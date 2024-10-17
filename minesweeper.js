@@ -52,6 +52,7 @@ function checkWin() {
 function Win() {
     const button = document.createElement("button");
     button.textContent = "you win. you may go on.";
-    button.addEventListener("click", 
+    button.addEventListener("click", window.location.href("page2.html")
+    document.body.appendChild("button");
         
 createGrid();
