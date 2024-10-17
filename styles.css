@@ -35,6 +35,33 @@ background-color: rgb(61, 57, 61);
 }
 
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    gap: 2px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: pinkl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333
+}
+
+button {
+    margin: 20px auto;
+    padding:10px 20px;
+    font-size: 15px;
+}
+    
+
+
+    
 .body2 {
     background-color: #1c083e;
     font-family: Playwrite Deutschland Grundschrift, serif;
