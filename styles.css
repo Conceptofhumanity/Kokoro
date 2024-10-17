@@ -27,7 +27,6 @@ background-color: rgb(61, 57, 61);
  padding: 10px 20px;
  border: ghostwhite;
  border-radius: 5px;
- text-decoration:oklab(from color l a b);
  font-size: 16px;
 }
 
@@ -37,7 +36,7 @@ background-color: rgb(61, 57, 61);
 
 
 .body2 {
-    background-color: 1c083e;
+    background-color: #1c083e;
     font-family: Matemasie, serif;
     color: #ffffff;
     margin: 0;
@@ -45,7 +44,7 @@ background-color: rgb(61, 57, 61);
 }
 
 .header2 {
-    Color: rgb(200, 140, 170);
+    color: rgb(200, 140, 170);
     text-align: left;
     margin-top: 50px;
 }
@@ -60,12 +59,11 @@ background-color: rgb(61, 57, 61);
 }
 
 .btn2 {
-background-color: 1c083e;
+background-color: #1c083e;
  color: rgb(100, 0, 0);
  padding: 10px 20px;
  border: ghostwhite;
  border-radius: 5px;
- text-decoration:oklab(from color l a b);
  font-size: 16px;
 }
 
