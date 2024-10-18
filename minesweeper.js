@@ -25,7 +25,7 @@ function createGrid() {
             if(mineCount >= maxmines) break;     
         }     
      }
-
+}
 /*function placeMines() {
     let mineCount = 0
     while (mineCount < mines) {
@@ -66,5 +66,5 @@ function Win() {
         }, 500);
     });
     document.body.appendChild(button);
-        
+}
 createGrid();
