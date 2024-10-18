@@ -45,7 +45,7 @@ background-color: rgb(61, 57, 61);
 .cell {
     width: 30px;
     height: 30px;
-    background-color: pinkl;
+    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
