@@ -3,11 +3,10 @@ const size = 5;
 const maxmines = 15; 
 const basemines = 5;
 const cells = []; 
-const width = size;
 
 function createGrid() {
     let mineCount = 0
-    for (let i = 0; i < width * width; i++) {
+    for (let i = 0; i < size * size; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.dataset.id = i;
@@ -50,7 +49,7 @@ function cellClicked() {
 
 function checkWin() {
     const revealedCells = document.querySelectorAll('.revealed').length;
-    if (revealedCells === (width * width - numberofmines)) {
+    if (revealedCells === (size * size - numberofmines)) {
         Win();
         alert("you win. the button is in the bottom left corner");
     }
