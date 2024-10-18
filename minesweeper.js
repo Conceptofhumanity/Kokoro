@@ -4,18 +4,18 @@ const mines = 10;
 const cells = []; 
 
 function createGrid() {
-    for i = 0; i < width * width; i++) {
+    for let(i = 0; i < width * width; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.dataset.id = i;
-        cell.addEventListener('click', cellClicked());
+        cell.addEventListener('click', cellClicked);
         grid.appendChild.(cell)
         cells.push.cell;
 
 
         let mineCount = 0
         if(mineCount > mines) {
-            try(Math.random() < .2) {
+            if(Math.random() < .2) {
             cells.classList.add("mine");
             mineCount++;
             }     
@@ -45,14 +45,17 @@ function cellClicked() {
 }
 
 function checkWin() {
-    if revealed cells === (width * width - mines) {
+    if revealedCells = document.querySelectorAll('.revealed').length
+        (revealedCells === (width * width - mines)) {
         Win();
     alert("you win. the button is in the bottom left corner");
 
 function Win() {
     const button = document.createElement("button");
     button.textContent = "you win. you may go on.";
-    button.addEventListener("click", window.location.href("page2.html")
+    button.addEventListener("click", () => { 
+        window.location.href("page2.html");
+    });
     document.body.appendChild("button");
         
 createGrid();
