@@ -13,17 +13,19 @@ function createGrid() {
         cell.addEventListener('click', cellClicked);
         grid.appendChild(cell);
         cells.push(cell);
+
+            while(mineCount < numberofmines) {
+                if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
+                cells[i].classList.add("mine");
+                mineCount++;
+                if(mineCount >= maxmines) break;     
+        }     
+     }
     }
    
     const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
-    while(mineCount > numberofmines) {
-        if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
-        cells[i].classList.add("mine");
-        mineCount++;
-            if(mineCount >= maxmines) break;     
-        }     
-     }
+
 }
 /*function placeMines() {
     let mineCount = 0
