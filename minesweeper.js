@@ -1,5 +1,5 @@
 const grid = document.querySelector('.grid');
-const size = 5;  
+const size = 10;  
 const maxmines = 15; 
 const basemines = 5;
 const cells = []; 
@@ -38,9 +38,8 @@ function createGrid() {
 */
     
 function cellClicked() {
-    alert("IVE BEEN CLICKED OH NO EGAD MAN")
     if(this.classList.contains('mine')) {
-        alert('BOOOM. haha. nice. hit a bomb.');
+        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         return;
     } else {
         this.classList.add('revealed');
