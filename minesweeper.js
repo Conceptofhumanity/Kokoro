@@ -17,7 +17,7 @@ function createGrid() {
    
     const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
-    while(mineCount < numberofmines) {
+    while(mineCount > numberofmines) {
         if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
         cells[i].classList.add("mine");
         mineCount++;
