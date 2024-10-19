@@ -14,11 +14,11 @@ function createGrid() {
         grid.appendChild(cell);
         cells.push(cell);
 
-            while(mineCount < numberofmines) {
-                if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
-                cells[i].classList.add("mine");
-                mineCount++;
-                if(mineCount >= maxmines) break;     
+        while(mineCount < numberofmines) {
+            if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
+            cells[i].classList.add("mine");
+            mineCount++;
+            if(mineCount >= maxmines) break;     
         }     
      }
     }
