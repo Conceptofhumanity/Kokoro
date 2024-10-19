@@ -38,6 +38,7 @@ function createGrid() {
 */
     
 function cellClicked() {
+    alert("IVE BEEN CLICKED OH NO EGAD MAN")
     if(this.classList.contains('mine')) {
         alert('BOOOM. haha. nice. hit a bomb.');
         return;
