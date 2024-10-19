@@ -37,8 +37,8 @@ background-color: rgb(61, 57, 61);
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 30px);
-    grid-template-rows: repeat(5,30px);
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10,30px);
     gap: 2px;
     margin: 20px auto;
 }
@@ -46,7 +46,7 @@ background-color: rgb(61, 57, 61);
 .cell {
     width: 30px;
     height: 30px;
-    background-color: pink;
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,14 +54,33 @@ background-color: rgb(61, 57, 61);
     border: 1px solid #333
 }
 
-button {
+.button {
     margin: 20px auto;
     padding:10px 20px;
     font-size: 15px;
 }
     
+.revealed {
+    width: 30px;
+    height: 30px;
+    background-color: green; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333
+}
 
-
+.mine {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333
+}
     
 .body2 {
     background-color: #1c083e;
