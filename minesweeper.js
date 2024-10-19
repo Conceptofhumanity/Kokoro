@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 const size = 10;  
-const maxmines = 15; 
-const basemines = 5;
+const maxmines = 25; 
+const basemines = 10;
 const cells = []; 
 
 function createGrid() {
