@@ -37,8 +37,8 @@ background-color: rgb(61, 57, 61);
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10,30px);
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(5,30px);
     gap: 2px;
     margin: 20px auto;
 }
@@ -65,7 +65,7 @@ button {
     
 .body2 {
     background-color: #1c083e;
-    font-family: Playwrite Deutschland Grundschrift, serif;
+    font-family: Playwrite Deutschland Grundschrift;
     color: rgb(200,140,170);
     margin: 0;
     padding: 0;
@@ -73,7 +73,7 @@ button {
 
 .header2 {
     color: rgb(200, 140, 170);
-    text-align: left;
+    text-align: start;
     margin-top: 50px;
 }
 
@@ -83,12 +83,12 @@ button {
     line-height: 1.6;
     max-width: 800px;
     margin: 20px auto;
-    text-align: left;
+    text-align: start;
 }
 
 .btn2 {
 background-color: #1c083e;
- color: rgb(100, 0, 0);
+ color: rgb(200, 140, 170);
  padding: 10px 20px;
  border: ghostwhite;
  border-radius: 5px;
