@@ -4,6 +4,8 @@ const maxmines = 25;
 const basemines = 10;
 const cells = []; 
 
+        const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
+
 function createGrid() {
     let mineCount = 0
     for (let i = 0; i < size * size; i++) {
@@ -14,8 +16,6 @@ function createGrid() {
         grid.appendChild(cell);
         cells.push(cell);
 
-        const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
-     
         while(mineCount < numberofmines) {
             if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
             cells[i].classList.add("mine");
