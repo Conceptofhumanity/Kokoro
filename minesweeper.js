@@ -1,6 +1,6 @@
 const grid = document.querySelector('.grid');
 const size = 10;  
-const maxmines = 30; 
+const maxmines = 25; 
 const basemines = 10;
 const cells = []; 
 
@@ -30,15 +30,30 @@ function createGrid() {
     }
 placeMines();
 }
-    
+
+function gameEnd() {
+    gameOver = true;
+    cells.forEach(cell => {
+        if (cell.classList.contains('mine')) {
+            cell.classList.add("exploded")
+        }
+        else {
+            cell.classList.add('revealed')
+        }
+    });
+}
+
+
 function cellClicked() {
+    if (gameOver) return
+    
     if(this.classList.contains('mine')) {
         this.classList.add('exploded')
        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
-        return;
+        gameEnd()
     } else {
         this.classList.add('revealed');
-   checkWin();
+        checkWin();
     }
 }
 
