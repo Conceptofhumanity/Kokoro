@@ -13,6 +13,8 @@ function createGrid() {
         cell.addEventListener('click', cellClicked);
         grid.appendChild(cell);
         cells.push(cell);
+   
+    placeMines();
     }
    
     const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
@@ -64,4 +66,3 @@ function Win() {
     document.body.appendChild(button);
 }
 createGrid();
-placeMines();
