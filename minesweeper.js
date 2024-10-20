@@ -4,8 +4,6 @@ const maxmines = 25;
 const basemines = 10;
 const cells = []; 
 
-        const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
-
 function createGrid() {
     let mineCount = 0
     for (let i = 0; i < size * size; i++) {
@@ -15,35 +13,30 @@ function createGrid() {
         cell.addEventListener('click', cellClicked);
         grid.appendChild(cell);
         cells.push(cell);
-
-        while(mineCount < numberofmines) {
-            if(Math.random() < .2 && !cells[i].classList.contains("mine")) {
-            cells[i].classList.add("mine");
-            mineCount++;
-            if(mineCount >= maxmines) break;     
-        }     
-     }
     }
    
+    const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
+   
+    
 
 
+     }
 
-}
-/*function placeMines() {
+function placeMines() {
     let mineCount = 0
-    while (mineCount < mines) {
+    while (mineCount < numberofmines) {
         const randomIndex = Math.floor(Math.random() * cells.length);
-        if (!Cells[randomIndex].classList.contains('mine')) {
+        if (!cells[randomIndex].classList.contains('mine')) {
             cells[randomIndex].classList.add('mine')
             mineCount++;
         }
     }
 }
-*/
+
     
 function cellClicked() {
     if(this.classList.contains('mine')) {
-        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
+       alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         return;
     } else {
         this.classList.add('revealed');
