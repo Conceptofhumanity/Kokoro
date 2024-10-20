@@ -6,6 +6,17 @@ const cells = [];
 
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
+function placeMines() {
+    let mineCount = 0
+    while (mineCount < numberofmines) {
+        const randomIndex = Math.floor(Math.random() * cells.length);
+        if (!cells[randomIndex].classList.contains('mine')) {
+            cells[randomIndex].classList.add('mine')
+            mineCount++;
+        }
+    }
+}
+
 function createGrid() {
     let mineCount = 0
     for (let i = 0; i < size * size; i++) {
@@ -18,24 +29,8 @@ function createGrid() {
    
     placeMines();
     }
-   
-
-   
-    
-
-
-     }
-
-function placeMines() {
-    let mineCount = 0
-    while (mineCount < numberofmines) {
-        const randomIndex = Math.floor(Math.random() * cells.length);
-        if (!cells[randomIndex].classList.contains('mine')) {
-            cells[randomIndex].classList.add('mine')
-            mineCount++;
-        }
-    }
 }
+
 
     
 function cellClicked() {
