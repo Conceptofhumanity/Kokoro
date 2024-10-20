@@ -64,3 +64,4 @@ function Win() {
     document.body.appendChild(button);
 }
 createGrid();
+placeMines();
