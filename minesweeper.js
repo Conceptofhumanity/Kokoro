@@ -4,6 +4,8 @@ const maxmines = 25;
 const basemines = 10;
 const cells = []; 
 
+const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
+
 function createGrid() {
     let mineCount = 0
     for (let i = 0; i < size * size; i++) {
@@ -17,7 +19,7 @@ function createGrid() {
     placeMines();
     }
    
-    const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
+
    
     
 
