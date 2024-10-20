@@ -3,7 +3,7 @@ const size = 10;
 const maxmines = 25; 
 const basemines = 10;
 const cells = []; 
-const gameOver = false
+let gameOver = false
 
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
@@ -38,9 +38,6 @@ function gameEnd() {
     cells.forEach(cell => {
         if (cell.classList.contains('mine')) {
             cell.classList.add("exploded")
-        }
-        else {
-            cell.classList.add('revealed')
         }
     });
 }
