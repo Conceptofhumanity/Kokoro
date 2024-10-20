@@ -25,16 +25,15 @@ function createGrid() {
         cell.dataset.id = i;
         cell.addEventListener('click', cellClicked);
         grid.appendChild(cell);
-        cells.push(cell);
-   
-    placeMines();
+       cells.push(cell);
+  
     }
+placeMines();
 }
-
-
     
 function cellClicked() {
     if(this.classList.contains('mine')) {
+        this.classList.add('exploded')
        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         return;
     } else {
