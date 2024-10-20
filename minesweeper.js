@@ -33,7 +33,6 @@ placeMines();
 }
 
 function gameEnd() {
-    alert("you lose bozo idiot loser")
     gameOver = true;
     cells.forEach(cell => {
         if (cell.classList.contains('mine')) {
