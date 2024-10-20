@@ -41,6 +41,7 @@ background-color: rgb(61, 57, 61);
     grid-template-rows: repeat(10,30px);
     gap: 2px;
     margin: 20px auto;
+    align-self: center;
 }
 
 .cell {
