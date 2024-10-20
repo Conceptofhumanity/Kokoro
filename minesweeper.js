@@ -1,6 +1,6 @@
 const grid = document.querySelector('.grid');
 const size = 10;  
-const maxmines = 25; 
+const maxmines = 30; 
 const basemines = 10;
 const cells = []; 
 
