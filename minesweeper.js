@@ -3,7 +3,6 @@ const size = 10;
 const maxmines = 25; 
 const basemines = 10;
 const cells = []; 
-let gameOver = false
 
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
@@ -30,6 +29,7 @@ function createGrid() {
   
     }
 placeMines();
+minesNearby();
 }
 
 function gameEnd() {
@@ -38,7 +38,55 @@ function gameEnd() {
         if (cell.classList.contains('mine')) {
             cell.classList.add("exploded")
         }
+        else {
+            cell.classList.add('revealed')
+        }
     });
+}
+
+function printNearbyMines() {
+    for (let i= 0; i < size * size; i++) {
+        if (cells[i].classList.contains('mine')) continue;
+        const nearbyMines = getNeighboringMines(i);
+        if (nearbyMines > 0) {
+            cells[i].textContent = mineCount;  
+        }
+    }
+}
+
+function getNeighboringMines(index) {
+    const neighbors = getNeightbors(index);
+    let nearbyMines = 0;
+
+    meightbors.forEach(neightborIndex => {
+        if (cells[neighborIndex] && cells[neightborIndex].classClist.contains('mine')) {
+            mineCount++;
+        }
+    });
+
+    return nearbyMines
+}
+
+
+function getNeighbors(index) {
+    const neightbors = [];
+    const row = Math.floor(index / size);
+    const col = index % size;
+
+    const positions = [
+        [-1, -1], [-1,0], [-1,1],
+        [0, -1],          [0, 1],
+        [1, -1], [1, 0], [1, 1]  
+    ];
+    positions.forEach(([rowOffset, colOffset]) => {
+        const newRow = row + rowOffset;
+        const newCol = col + colOffset;
+
+        if (newRow >= 0 && newRow < size && newCOl >= 0 && newCol < size) {
+            neightbbors.push(newRow * size +newCol);
+        }
+    });
+    return neightbors;
 }
 
 
