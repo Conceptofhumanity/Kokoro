@@ -3,6 +3,7 @@ const size = 10;
 const maxmines = 25; 
 const basemines = 10;
 const cells = []; 
+let gameOver = false
 
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
