@@ -56,11 +56,11 @@ function printNearbyMines() {
 }
 
 function getNeighboringMines(index) {
-    const neighbors = getNeightbors(index);
+    const neighbors = getNeighbors(index);
     let nearbyMines = 0;
 
-    meightbors.forEach(neightborIndex => {
-        if (cells[neighborIndex] && cells[neightborIndex].classClist.contains('mine')) {
+    neighbors.forEach(neighborIndex => {
+        if (cells[neighborIndex] && cells[neighborIndex].classClist.contains('mine')) {
             mineCount++;
         }
     });
@@ -70,7 +70,7 @@ function getNeighboringMines(index) {
 
 
 function getNeighbors(index) {
-    const neightbors = [];
+    const neighbors = [];
     const row = Math.floor(index / size);
     const col = index % size;
 
@@ -84,10 +84,10 @@ function getNeighbors(index) {
         const newCol = col + colOffset;
 
         if (newRow >= 0 && newRow < size && newCOl >= 0 && newCol < size) {
-            neightbbors.push(newRow * size +newCol);
+            neighbors.push(newRow * size +newCol);
         }
     });
-    return neightbors;
+    return neighbors;
 }
 
 
