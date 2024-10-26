@@ -38,6 +38,9 @@ function gameEnd() {
         if (cell.classList.contains('mine')) {
             cell.classList.add("exploded")
         }
+        else {
+            cell.classList.add('revealed')
+        }
     });
 }
 
@@ -57,7 +60,7 @@ function getNeighboringMines(index) {
 
     neighbors.forEach(neighborIndex => {
         if (cells[neighborIndex] && cells[neighborIndex].classList.contains('mine')) {
-            mineCount++;
+            nearbyMines++; /* if cell is a neighbor, and is a mine, increase nearbyMines by 1 */
         }
     });
 
@@ -79,8 +82,8 @@ function getNeighbors(index) {
         const newRow = row + rowOffset;
         const newCol = col + colOffset;
 
-        if (newRow >= 0 && newRow < size && newCOl >= 0 && newCol < size) {
-            neighbors.push(newRow * size +newCol);
+        if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size) {
+            neighbors.push(newRow * size + newCol);
         }
     });
     return neighbors;
