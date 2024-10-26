@@ -88,9 +88,9 @@ function getNeighbors(index) {
 
 
 function cellClicked() {
-    if (gameOver) return
+    if (gameOver) return;
 
-    printNearbyMines()
+
     
     if(this.classList.contains('mine')) {
         this.classList.add('exploded')
@@ -98,6 +98,7 @@ function cellClicked() {
         gameEnd()
     } else {
         this.classList.add('revealed');
+        printNearbyMines();
         checkWin();
     }
 }
