@@ -41,6 +41,16 @@ function gameEnd() {
     });
 }
 
+function revealNearby() {
+    for (let i=0; i <size * size; i++) {
+        if (!cells[i].classList.contains('mine')) continue
+        const nearbyMines = getNeighboringMines(i);
+        if (nearbyMines = 0) {
+            cells[i].classList.add('revealed');
+        }
+    }
+}
+
 function printNearbyMines() {
     for (let i= 0; i < size * size; i++) {
         if (cells[i].classList.contains('mine')) continue;
@@ -99,6 +109,7 @@ function cellClicked() {
     } else {
         this.classList.add('revealed');
         printNearbyMines();
+        revealNearby();
         checkWin();
     }
 }
