@@ -43,7 +43,7 @@ function gameEnd() {
 
 function revealNearby() {
     for (let i=0; i <size * size; i++) {
-        if (!cells[i].classList.contains('mine')) continue
+        if (cells[i].classList.contains('mine')) continue
         const nearbyMines = getNeighboringMines(i);
         if (nearbyMines === 0) {
             cells[i].classList.add('revealed');
