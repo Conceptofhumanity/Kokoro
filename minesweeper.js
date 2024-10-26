@@ -41,6 +41,7 @@ function gameEnd() {
     });
 }
 
+/* decidedly a tomorrow thing 
 function revealNearby() {
     for (let i=0; i <size * size; i++) {
         if (cells[i].classList.contains('mine')) continue
@@ -50,6 +51,7 @@ function revealNearby() {
         }
     }
 }
+*/
 
 function printNearbyMines() {
     for (let i= 0; i < size * size; i++) {
