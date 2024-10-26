@@ -46,7 +46,7 @@ function printNearbyMines() {
         if (cells[i].classList.contains('mine')) continue;
         const nearbyMines = getNeighboringMines(i);
         if (nearbyMines > 0) {
-            cells[i].textContent = mineCount;  
+            cells[i].textContent = nearbyMines;  
         }
     }
 }
