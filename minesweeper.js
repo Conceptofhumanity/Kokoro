@@ -4,7 +4,6 @@ const maxmines = 25;
 const basemines = 10;
 const cells = []; 
 let gameOver = false
-
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
 function placeMines() {
@@ -39,9 +38,6 @@ function gameEnd() {
         if (cell.classList.contains('mine')) {
             cell.classList.add("exploded")
         }
-        else {
-            cell.classList.add('revealed')
-        }
     });
 }
 
@@ -60,7 +56,7 @@ function getNeighboringMines(index) {
     let nearbyMines = 0;
 
     neighbors.forEach(neighborIndex => {
-        if (cells[neighborIndex] && cells[neighborIndex].classClist.contains('mine')) {
+        if (cells[neighborIndex] && cells[neighborIndex].classList.contains('mine')) {
             mineCount++;
         }
     });
