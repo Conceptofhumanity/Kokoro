@@ -89,6 +89,8 @@ function getNeighbors(index) {
 
 function cellClicked() {
     if (gameOver) return
+
+    printNearbyMines()
     
     if(this.classList.contains('mine')) {
         this.classList.add('exploded')
