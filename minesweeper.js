@@ -38,9 +38,6 @@ function gameEnd() {
         if (cell.classList.contains('mine')) {
             cell.classList.add("exploded")
         }
-        else {
-            cell.classList.add('revealed')
-        }
     });
 }
 
