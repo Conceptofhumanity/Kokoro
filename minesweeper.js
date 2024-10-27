@@ -41,7 +41,7 @@ function gameEnd() {
     });
 }
 
-/* function revealNearby() {
+function revealNearby() {
     for (let i=0; i <size * size; i++) {
         if (cells[i].classList.contains('mine')) continue
         const nearbyMines = getNeighboringMines(i);
@@ -50,7 +50,7 @@ function gameEnd() {
         }
     }
 }
-*/
+
 
 function printNearbyMines() {
     for (let i= 0; i < size * size; i++) {
@@ -106,7 +106,7 @@ function cellClicked() {
         gameEnd()
     } else {
         this.classList.add('revealed');
-       /* revealNearby(); */
+        revealNearby(); 
         printNearbyMines();
         checkWin();
     }
