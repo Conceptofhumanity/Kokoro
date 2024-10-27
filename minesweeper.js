@@ -41,16 +41,23 @@ function gameEnd() {
     });
 }
 
-function revealNearby() {
-    for (let i=0; i <size * size; i++) {
-        if (cells[i].classList.contains('mine')) continue
-        const nearbyMines = getNeighboringMines(i);
-        if (nearbyMines === 0) {
-            cells[i].classList.add('revealed');
+function revealNearby(i) {
+        if (cells[i].classList.contains('mine') || cells[i].classList.contains("revealed")) {
+            return;
         }
-    }
+        
+        const nearbyMines = getNeighboringMines(i)
+
+        if (nearbyMines > 1) {
+            cells[i].classList.add('revealed')
+            return;
+        }
+        
+        const neighbors = getNeighbors(i);
+        neighbors.forEach(neighborIndex => revealNearby(neighborIndex));
 }
 
+    
 
 function printNearbyMines() {
     for (let i= 0; i < size * size; i++) {
@@ -100,13 +107,15 @@ function getNeighbors(index) {
 
 function cellClicked() {
     if (gameOver) return
+
+
     if(this.classList.contains('mine')) {
         this.classList.add('exploded')
        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         gameEnd()
     } else {
         this.classList.add('revealed');
-        revealNearby(); 
+        revealNearby();
         printNearbyMines();
         checkWin();
     }
