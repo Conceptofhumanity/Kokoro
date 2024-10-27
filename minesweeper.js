@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 const size = 10;  
 const maxmines = 25; 
-const basemines = 10;
+const basemines = 15;
 const cells = []; 
 let gameOver = false
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
@@ -41,8 +41,7 @@ function gameEnd() {
     });
 }
 
-/* decidedly a tomorrow thing 
-function revealNearby() {
+/* function revealNearby() {
     for (let i=0; i <size * size; i++) {
         if (cells[i].classList.contains('mine')) continue
         const nearbyMines = getNeighboringMines(i);
@@ -100,23 +99,21 @@ function getNeighbors(index) {
 
 
 function cellClicked() {
-    if (gameOver) return;
-
-
-    
+    if (gameOver) return
     if(this.classList.contains('mine')) {
         this.classList.add('exploded')
        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         gameEnd()
     } else {
         this.classList.add('revealed');
+       /* revealNearby(); */
         printNearbyMines();
-        revealNearby();
         checkWin();
     }
 }
 
 function checkWin() {
+    if (gameOver) return;
     const revealedCells = document.querySelectorAll('.revealed').length;
     if (revealedCells === (size * size - numberofmines)) {
         Win();
@@ -125,6 +122,7 @@ function checkWin() {
 }
         
 function Win() {
+    gameOver = true;
     const button = document.createElement("button");
     button.textContent = "you win. you may go on.";
     button.addEventListener("click", () => { 
