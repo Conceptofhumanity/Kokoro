@@ -26,7 +26,10 @@ function createGrid() {
         cell.classList.add('cell');
         cell.dataset.id = i;
         cell.addEventListener('click', () => cellClicked(i)); 
-        cell.addEventListener('contextmenu', () => cellFlagged(i));
+        cell.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            cellFlagged(i);
+        });
         grid.appendChild(cell);
        cells.push(cell);
   
@@ -39,6 +42,9 @@ function gameEnd() {
     cells.forEach(cell => {
         if (cell.classList.contains('mine')) {
             cell.classList.add("exploded")
+        }
+        if (cell.classList.contains('flagged') && !cell.classList.contains('mine')) {
+            cell.classList.remove('flagged');
         }
     });
 }
@@ -133,8 +139,7 @@ function cellClicked(i) {
 function cellFlagged(i) {
     console.log("hehe why are you in the log")
     if (gameOver) return
-    cells[i].classList.toggle('flagged')
-
+    cells[i].classList.toggle('flagged'); 
 }
 
 function checkWin() {
