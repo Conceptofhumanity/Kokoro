@@ -126,7 +126,7 @@ function cellClicked(i) {
 
     if(cells[i].classList.contains('mine')) {
         cells[i].classList.add('exploded')
-       alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
+        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         gameEnd()
     } else {
         cells[i].classList.add('revealed');
