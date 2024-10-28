@@ -26,6 +26,7 @@ function createGrid() {
         cell.classList.add('cell');
         cell.dataset.id = i;
         cell.addEventListener('click', () => cellClicked(i)); 
+        cell.addEventListener('contextmenu', () => cellFlagged(i));
         grid.appendChild(cell);
        cells.push(cell);
   
@@ -127,6 +128,13 @@ function cellClicked(i) {
         /*printNearbyMines();*/
         checkWin();
     }
+}
+
+function cellFlagged(i) {
+    console.log("hehe why are you in the log")
+    if (gameOver) return
+    cells[i].classList.toggle('flagged')
+
 }
 
 function checkWin() {
