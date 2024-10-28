@@ -65,14 +65,15 @@ background-color: rgb(61, 57, 61);
 }
 
 .flagged {
-width: 30px;
-height: 30px;
-background-color: darkred;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-border: 1px solid #333;
+    width: 30px;
+    height: 30px;
+    background-color: darkred !important;
+    color: darkred !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333;
 }
 
 .button {
