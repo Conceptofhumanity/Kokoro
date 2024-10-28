@@ -1,3 +1,5 @@
+/* DONT LOOK AT MY BAD CODE AVERT YOUR EYES */  
+
 const grid = document.querySelector('.grid');
 const size = 10;  
 const maxmines = 25; 
@@ -5,6 +7,7 @@ const basemines = 15;
 const cells = []; 
 let gameOver = false
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
+
 
 function placeMines() {
     let mineCount = 0
@@ -18,18 +21,16 @@ function placeMines() {
 }
 
 function createGrid() {
-    let mineCount = 0
     for (let i = 0; i < size * size; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.dataset.id = i;
-        cell.addEventListener('click', cellClicked);
+        cell.addEventListener('click', () => cellClicked(i)); 
         grid.appendChild(cell);
        cells.push(cell);
   
     }
 placeMines();
-minesNearby();
 }
 
 function gameEnd() {
@@ -41,25 +42,31 @@ function gameEnd() {
     });
 }
 
-function revealNearby(i) {
-        if (cells[i].classList.contains('mine') || cells[i].classList.contains("revealed")) {
-            return;
-        }
-        
-        const nearbyMines = getNeighboringMines(i)
-
-        if (nearbyMines > 1) {
-            cells[i].classList.add('revealed')
-            return;
-        }
-        
-        const neighbors = getNeighbors(i);
-        neighbors.forEach(neighborIndex => revealNearby(neighborIndex));
-}
-
+function revealNearby(i) { 
+    if(cells[i].classList.contains("mine")) return;
+    const nearbyMines = getNeighboringMines(i)
     
 
-function printNearbyMines() {
+    if (nearbyMines > 0) {
+        cells[i].textContent = nearbyMines;
+        cells[i].classList.add('revealed');
+        return;
+
+    } else { 
+        }
+        cells[i].classList.add('revealed')
+        cells[i].textContent = ''
+
+            const neighbors = getNeighbors(i);
+            neighbors.forEach(neighborIndex => {
+                if (!cells[neighborIndex].classList.contains("revealed"))
+                revealNearby(neighborIndex)
+
+            });
+     }
+    
+    
+/* function printNearbyMines(i) {
     for (let i= 0; i < size * size; i++) {
         if (cells[i].classList.contains('mine')) continue;
         const nearbyMines = getNeighboringMines(i);
@@ -68,6 +75,7 @@ function printNearbyMines() {
         }
     }
 }
+*/ 
 
 function getNeighboringMines(index) {
     const neighbors = getNeighbors(index);
@@ -105,18 +113,18 @@ function getNeighbors(index) {
 }
 
 
-function cellClicked() {
+function cellClicked(i) {
+    console.log("hehe why are you in the log")
     if (gameOver) return
 
-
-    if(this.classList.contains('mine')) {
-        this.classList.add('exploded')
+    if(cells[i].classList.contains('mine')) {
+        cells[i].classList.add('exploded')
        alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
         gameEnd()
     } else {
-        this.classList.add('revealed');
-        revealNearby();
-        printNearbyMines();
+        cells[i].classList.add('revealed');
+       revealNearby(i);
+        /*printNearbyMines();*/
         checkWin();
     }
 }
