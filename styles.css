@@ -44,6 +44,15 @@ background-color: rgb(61, 57, 61);
     align-self: center;
 }
 
+.smallgrid {
+    display: grid;
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(5,30px);
+    gap: 2px;
+    margin: 20px auto;
+    align-self: center;
+}
+
 .cell {
     width: 30px;
     height: 30px;
@@ -55,10 +64,24 @@ background-color: rgb(61, 57, 61);
     border: 1px solid #333;
 }
 
+.flagged {
+width: 30px;
+height: 30px;
+background-color: darkred;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+border: 1px solid #333;
+}
+
 .button {
-    margin: 20px auto;
-    padding:10px 20px;
-    font-size: 15px;
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: 16px;
 }
     
 .revealed {
@@ -75,7 +98,18 @@ background-color: rgb(61, 57, 61);
 .mine {
     width: 30px;
     height: 30px;
-    background-color: whitesmoke;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.revealedmine {
+    width: 30px;
+    height: 30px;
+    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
