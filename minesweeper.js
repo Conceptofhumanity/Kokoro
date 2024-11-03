@@ -147,7 +147,7 @@ function checkWin() {
     const revealedCells = document.querySelectorAll('.revealed').length;
     if (revealedCells === (size * size - numberofmines)) {
         Win();
-        alert("you win. the button is in the bottom left corner");
+        alert("good job, you win.");
     }
 }
         
