@@ -24,14 +24,14 @@ function placeMines2() {
     let mineCount = 0
     while (mineCount < numberofmines) {
         const randomIndex = Math.floor(Math.random() * cells.length);
-        if (!cells[randomIndex].classList.contains('mine')) {
-            cells[randomIndex].classList.add('mine')
+        if (cells[randomIndex].classList.contains('mine')) {
+            cells[randomIndex].classList.add('mine');
             mineCount++
         }
         const neighbors = getNeighbors(i);
             neighbors.forEach(neighborIndex => {
-                if (!cells[neighborIndex].classList.contains("mine"))
-                    cells[neighborIndex].classList.remove('mine')
+                if (!cells[neighborIndex].classList.contains("mine"));
+                    cells[neighborIndex].classList.remove('mine');
         }
     }
 }
