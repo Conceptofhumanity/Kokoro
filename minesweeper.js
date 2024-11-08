@@ -7,7 +7,7 @@ const basemines = 15;
 const cells = []; 
 let gameOver = false
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
-
+let firstClick = false
 
 /* function placeMines() {
     let mineCount = 0
@@ -20,21 +20,17 @@ const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + b
     }
 } */
 
-function placeMines2() {
+function placeMines2(safeZone) {
     let mineCount = 0
     while (mineCount < numberofmines) {
         const randomIndex = Math.floor(Math.random() * cells.length);
-        if (cells[randomIndex].classList.contains('mine')) {
+        if (!cells[randomIndex].classList.contains('mine') && !safeZone.includes(randomIndex)) {
             cells[randomIndex].classList.add('mine');
             mineCount++
-        }
-        const neighbors = getNeighbors(i);
-            neighbors.forEach(neighborIndex => {
-                if (!cells[neighborIndex].classList.contains("mine"));
-                    cells[neighborIndex].classList.remove('mine');
-        }
     }
 }
+}
+
 function createGrid() {
     for (let i = 0; i < size * size; i++) {
         const cell = document.createElement('div');
@@ -53,11 +49,14 @@ function createGrid() {
 /*placeMines();*/
 }
 
-function minesOnClick(i) {
-    if (cells[i].forEach.classList.contains("first-click") {
+function minesOnClick(safeZone) {
+    if (cells.some(cells => cells.classList.contains('mine'))) {
         return;
     } else {
-        placeMines2() 
+        placeMines2(safeZone) 
+    }
+}
+
 
 function gameEnd() {
     gameOver = true;
@@ -143,16 +142,21 @@ function getNeighbors(index) {
 
 
 function cellClicked(i) {
-    console.log("hehe why are you in the log")
-    cells.classList.add("first-click")
-    if (gameOver) return
+    console.log("hehe why are you in the log");
+    if (gameOver) return;
 
-    minesOnClick(i)
+    
+
+    if (!firstClick) {
+        const safeZone = [i, ...getNeighbors(i)];
+        minesOnClick(safeZone);
+        firstClick = true
+    }
     
     if(cells[i].classList.contains('mine')) {
-        cells[i].classList.add('exploded')
+        cells[i].classList.add('exploded');
         alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
-        gameEnd()
+        gameEnd();
     } else {
         cells[i].classList.add('revealed');
        revealNearby(i);
