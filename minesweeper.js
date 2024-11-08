@@ -40,7 +40,7 @@ function createGrid() {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.dataset.id = i;
-        cell.addEventListener('click', () => cellClicked(i), minesOnClick(i)); 
+        cell.addEventListener('click', () => cellClicked(i));  
         cell.addEventListener('contextmenu', (event) => {
             event.preventDefault();
             cellFlagged(i);
@@ -147,6 +147,8 @@ function cellClicked(i) {
     cells.classList.add("first-click")
     if (gameOver) return
 
+    minesOnClick(i)
+    
     if(cells[i].classList.contains('mine')) {
         cells[i].classList.add('exploded')
         alert("IVE BEEN CLICKED OH NO EGAD MAN WHAT HAVE YOU DONE");
