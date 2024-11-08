@@ -40,12 +40,12 @@ function createGrid() {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.dataset.id = i;
-        cell.addEventListener('click', () => cellClicked(i)); 
+        cell.addEventListener('click', () => cellClicked(i), minesOnClick(i)); 
         cell.addEventListener('contextmenu', (event) => {
             event.preventDefault();
             cellFlagged(i);
         });
-        cell.addEventListener('click', () => minesOnClick(i));
+
         grid.appendChild(cell);
        cells.push(cell);
       
