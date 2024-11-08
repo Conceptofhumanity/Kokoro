@@ -1,3 +1,17 @@
+.station {
+    background-image: url('subway_inverteds.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.station-body {
+    font-family: Cinzel, serif;
+    color:lavenderblush;
+    margin: 0;
+    padding: 0;
+}
+
 .first-body {
     background-color: black;
     font-family: Cinzel, serif;
