@@ -30,12 +30,19 @@ function createGrid() {
             event.preventDefault();
             cellFlagged(i);
         });
+        cell.addEventListener('click', () => minesOnClick(i));
         grid.appendChild(cell);
        cells.push(cell);
-  
+      
     }
-placeMines();
+/*placeMines();*/
 }
+
+function minesOnClick(i) {
+    if (any cells[i].classList.contains("mine") {
+        return;
+    } else {
+        placeMines() 
 
 function gameEnd() {
     gameOver = true;
