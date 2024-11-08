@@ -1,6 +1,5 @@
-.station-background {
-    background-color: black; 
-  /*  background-image: url('stationinverteds.png'); */
+.station {
+    background-image:  url('stationinverteds.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -49,7 +48,86 @@ background-color: rgb(61, 57, 61);
     background-color: rgb(0, 0, 0)
 }
 
+   
+.body2 {
+    background-color: #1c083e;
+    font-family: Playwrite Deutschland Grundschrift;
+    color: rgb(200,140,170);
+    margin: 0;
+    padding: 0;
+}
 
+.header2 {
+    color: rgb(200, 140, 170);
+    text-align: start;
+    margin-top: 50px;
+}
+
+.paragraph2 {
+    color: rgb(200, 140, 170);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: start;
+}
+
+.btn2 {
+background-color: #1c083e;
+ color: rgb(200, 140, 170);
+ padding: 10px 20px;
+ border: ghostwhite;
+ border-radius: 5px;
+ font-size: 16px;
+}
+
+.btn2:hover {
+    background-color: rgb(0, 0, 0)
+}
+
+.body3 {
+    background-color: black;
+    font-family: Matemasie, serif;
+    color: pink;
+    margin: 0;
+    padding: 0;
+}
+
+.header3 {
+    Color: rgb(200, 140, 170);
+    text-align: left;
+    margin-top: 50px;
+}
+
+.paragraph3 {
+    color: rgb(200, 140, 170);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.btn3 {
+background-color: green;
+ color: rgb(200, 140, 170);
+ padding: 10px 20px;
+ border: ghostwhite;
+ border-radius: 5px;
+ text-decoration:oklab(from color l a b);
+ font-size: 16px;
+}
+
+.btn3:hover {
+    background-color: rgb(0, 0, 0)
+}
+
+.freaky {
+    font-family: Imperial Script, cursive;
+}
+
+
+/* MINESWEEPER */
 .grid {
     display: grid;
     grid-template-columns: repeat(10, 30px);
@@ -142,81 +220,4 @@ background-color: rgb(61, 57, 61);
     align-items: center;
     cursor: pointer;
     border: 1px solid #333;
-}
-    
-.body2 {
-    background-color: #1c083e;
-    font-family: Playwrite Deutschland Grundschrift;
-    color: rgb(200,140,170);
-    margin: 0;
-    padding: 0;
-}
-
-.header2 {
-    color: rgb(200, 140, 170);
-    text-align: start;
-    margin-top: 50px;
-}
-
-.paragraph2 {
-    color: rgb(200, 140, 170);
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: start;
-}
-
-.btn2 {
-background-color: #1c083e;
- color: rgb(200, 140, 170);
- padding: 10px 20px;
- border: ghostwhite;
- border-radius: 5px;
- font-size: 16px;
-}
-
-.btn2:hover {
-    background-color: rgb(0, 0, 0)
-}
-
-.body3 {
-    background-color: lightpurple;
-    font-family: Matemasie, serif;
-    color: pink;
-    margin: 0;
-    padding: 0;
-}
-
-.header3 {
-    Color: rgb(200, 140, 170);
-    text-align: left;
-    margin-top: 50px;
-}
-
-.paragraph3 {
-    color: rgb(200, 140, 170);
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.btn3 {
-background-color: green;
- color: rgb(200, 140, 170);
- padding: 10px 20px;
- border: ghostwhite;
- border-radius: 5px;
- text-decoration:oklab(from color l a b);
- font-size: 16px;
-}
-
-.btn3:hover {
-    background-color: rgb(0, 0, 0)
-}
-
-.freaky {
-    font-family: Imperial Script, cursive;
 }
