@@ -9,7 +9,7 @@ let gameOver = false
 const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
 
 
-function placeMines() {
+/* function placeMines() {
     let mineCount = 0
     while (mineCount < numberofmines) {
         const randomIndex = Math.floor(Math.random() * cells.length);
@@ -17,6 +17,21 @@ function placeMines() {
             cells[randomIndex].classList.add('mine')
             mineCount++;
         }
+    }
+} */
+
+function placeMines2() {
+    let mineCount = 0
+    while (mineCount < numberofmines) {
+        const randomIndex = Math.floor(Math.random() * cells.length);
+        if (!cells[randomIndex].classList.contains('mine')) {
+            cells[randomIndex].classList.add('mine')
+            mineCount++
+        }
+        const neighbors = getNeighbors(i);
+            neighbors.forEach(neighborIndex => {
+                if (!cells[neighborIndex].classList.contains("mine"))
+                    cells[neighborIndex].classList.remove('mine')
     }
 }
 
@@ -39,10 +54,10 @@ function createGrid() {
 }
 
 function minesOnClick(i) {
-    if (any cells[i].classList.contains("mine") {
+    if (cells[i].forEach.classList.contains("first-click") {
         return;
     } else {
-        placeMines() 
+        placeMines2() 
 
 function gameEnd() {
     gameOver = true;
@@ -129,6 +144,7 @@ function getNeighbors(index) {
 
 function cellClicked(i) {
     console.log("hehe why are you in the log")
+    cells.classList.add("first-click")
     if (gameOver) return
 
     if(cells[i].classList.contains('mine')) {
