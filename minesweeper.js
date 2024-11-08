@@ -32,9 +32,9 @@ function placeMines2() {
             neighbors.forEach(neighborIndex => {
                 if (!cells[neighborIndex].classList.contains("mine"))
                     cells[neighborIndex].classList.remove('mine')
+        }
     }
 }
-
 function createGrid() {
     for (let i = 0; i < size * size; i++) {
         const cell = document.createElement('div');
