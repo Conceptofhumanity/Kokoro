@@ -1,12 +1,8 @@
-.station {
-   /* background-image:  url('stationinverteds.png'); */
-    background-color: black;
+.station-body {
+    background-image:  url('stationinverteds.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.station-body {
     font-family: Cinzel, serif;
     color:lavenderblush;
     margin: 0;
