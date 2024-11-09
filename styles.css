@@ -1,6 +1,6 @@
 .station {
     background-image:  url('subway_inverteds.png'); 
-    background-color: black;
+      background-color: black;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -8,12 +8,34 @@
     font-family: Cinzel, serif;
     text-align: right;
     text-shadow: #1c083e;
-    font-size: large;
+    font-size: xx-large;
     color:lavenderblush;
     margin: 20px;
     padding: 20px;
 }
 
+.station-btn {
+    background-color: rgb(61, 57, 61);
+     color: rgb(255, 255, 255);
+     padding: 10px 20px;
+     border: ghostwhite;
+     border-radius: 5px;
+     font-size: 16px; 
+     white-space: nowrap;
+}
+
+.station-main-btn {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: x-large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+}
 
 .first-body {
     background-color: black;
@@ -45,6 +67,7 @@ background-color: rgb(61, 57, 61);
  border: ghostwhite;
  border-radius: 5px;
  font-size: 16px;
+ white-space: nowrap;
 }
 
 .first-btn:hover {
