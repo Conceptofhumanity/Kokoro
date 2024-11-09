@@ -30,10 +30,10 @@
     padding: 10px 20px;
     border: ghostwhite;
     border-radius: 5px;
-    font-size: x-large;
+    font-size: 20px;
     text-align: end;
     outline: none;
-    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 0 3px rgba(255, 252, 82, 0.5), 0 0 5px rgba(255, 255, 255, 0.3); 
     white-space: nowrap;
 }
 
