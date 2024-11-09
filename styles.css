@@ -1,5 +1,6 @@
 .station {
-    background-image:  url('stationinverteds.png');
+   /* background-image:  url('stationinverteds.png'); */
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
