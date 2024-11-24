@@ -22,15 +22,58 @@
   <p>Hello, this is the station, where you can navigate this land.</p>
   <p>You don't need to know a lot about it, which is to  say I don't know a lot about it.</p>
   <p>There are countless buttons I don't know what do.</p>
-  <p>These 6 ones that say words are the ones we care about</p>
+  <p>These 6 with text are the ones we care about.</p>
   <p>unless you think you can somehow unlock the rest.</p>
   <p>You have to input a password before you can enter, but then </p>
   <p> this here train will take you to whatever area you want to go to.</p>
   <p>Now go get that first password, or enter it, I dunno, I'm not omniscient.</p>
-  <a class="station-main-btn" href="index.html">Page 1</a>
-  <a class="station-main-btn" href="page2.html">Page 2</a>
-  <a class="station-main-btn" href="page3.html">Page 3</a>
-  <a class="station-main-btn" href="minesweeper.js">Page 4</a>
-  <a class="station-main-btn" href="minesweeper.js">Page 5</a>
-  <a class="station-main-btn" href="minesweeper.js">Bonus Round</a>
+
+<!-- FOR LATER: THE DIV SHOULD NOT HAVE THE CLASS "LOCK" THAT SHOULD BE THE BUTTON. -->
+  
+  
+  <div>
+    <a class="lock1" href="index.html">Page 1</a>
+    <button onclick="unlock1()">Submit</button>
+    <input type="password" id="entry1">
+  </div>
+
+  
+  <div>
+    <a class="lock2" href="page2.html">Page 2</a>
+    <button onclick="unlock2()">Submit</button>
+    <input type="password" id="entry2">
+  </div>
+
+
+  <div>
+  <a class="lock3" href="page3.html">Page 3</a>
+    <button onclick="unlock3()">Submit</button>
+    <input type="password" id="entry3">
+  </div>
+
+  <div>
+    <a class="lock4" href="minesweeper.js">Page 4</a>
+    <button onclick="unlock4()">Submit</button>
+    <input type="password" id="entry4">
+  </div>
+
+
+  
+  <div>
+    <a class="lock5" href="minesweeper.js">Page 5</a>
+    <button onclick="unlock5()">Submit</button>
+    <input type="password" id="entry5">
+  </div>
+
+
+  
+  <div>
+    <a class="lock6" href="minesweeper.js">Bonus Round</a>
+    <button onclick="unlock6()">Submit</button>
+    <input type="password" id="entry6">
+  </div>
+
+  <script src="lock.js"></script>
+
 </body>
+</html>
