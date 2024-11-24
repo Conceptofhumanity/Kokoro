@@ -1,6 +1,7 @@
+ /* STATION!!! */
 .station {
-    background-image:  url('subway_inverteds.png'); 
-      background-color: black;
+    background-image:  url('subway_inverteds.png');
+    background-color: black;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -14,7 +15,19 @@
     padding: 20px;
 }
 
-.station-btn {
+.station div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    margin: 10px 0;
+    justify-self: right;
+}
+
+.station a {
+    font-family: Cinzel, serif;
+    justify-self: right;
+    grid-column: 2;
+    margin-right: 10px;
     background-color: rgb(61, 57, 61);
      color: rgb(255, 255, 255);
      padding: 10px 20px;
@@ -24,19 +37,151 @@
      white-space: nowrap;
 }
 
+.station button {
+    font-family: Cinzel, serif;
+    justify-self: right;
+    grid-column: 2;
+    margin-right: 10px;
+    background-color: rgb(61, 57, 61);
+     color: rgb(255, 255, 255);
+     padding: 5px 10px;
+     border: ghostwhite;
+     border-radius: 5px;
+     font-size: 12px; 
+     white-space: nowrap;
+
+}
+
+.station input {
+    grid-column: 2;
+    justify-self: right;
+}
+
 .station-main-btn {
     background-color: rgb(61, 57, 61);
     color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: ghostwhite;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: large;
     text-align: end;
     outline: none;
-    box-shadow: 0 0 3px rgba(255, 252, 82, 0.5), 0 0 5px rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
     white-space: nowrap;
 }
 
+.lock1 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+    color: gray;
+    text-decoration: none;
+}
+
+.lock2 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+}
+
+.lock3 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+}
+
+.lock4 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+}
+
+
+.lock5 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+}
+.lock6 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: large;
+    text-align: end;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 252, 82, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); 
+    white-space: nowrap;
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+}
+
+.station-btn {
+    background-color: rgb(61, 57, 61);
+     color: rgb(255, 255, 255);
+     padding: 5px 10px;
+     border: ghostwhite;
+     border-radius: 5px;
+     font-size: 12px; 
+     white-space: nowrap;
+}
+/* remember to make it so that buttons and minesweeper and such are properly spaced / 
+doing like 
+this
+just
+did
+
+
+/* MAIN WEBSITE!!!*/
 .first-body {
     background-color: black;
     font-family: Cinzel, serif;
