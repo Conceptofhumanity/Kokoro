@@ -1,4 +1,12 @@
- /* STATION!!! */
+ /*GAH. you're in the css. smh. I imagine you're here for the password. i would just give it to you, but you wen't where you aren't supposed to be.
+so, insteead, i'll give you this link: {link|
+it'll take you to the place the password lies, don't worry. now get out.
+
+
+
+
+
+/* STATION!!! */
 .station {
     background-image:  url('subway_inverteds.png');
     background-color: black;
@@ -219,7 +227,7 @@ background-color: rgb(61, 57, 61);
     background-color: rgb(0, 0, 0)
 }
 
-   
+/*SECOND PAGE AAAAH*/
 .body2 {
     background-color: #1c083e;
     font-family: Playwrite Deutschland Grundschrift;
@@ -256,6 +264,7 @@ background-color: #1c083e;
     background-color: rgb(0, 0, 0)
 }
 
+/*THIRD PAGE!!!!*/
 .body3 {
     background-color: black;
     font-family: Matemasie, serif;
@@ -293,8 +302,60 @@ background-color: green;
     background-color: rgb(0, 0, 0)
 }
 
+/*PAGE 4!!!*/
+.body4 {
+    background-color: black;
+    font-family: "Xanh Mono", monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header4 {
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.paragraph4 {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.btn4 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn4:hover {
+    background-color: rgb(0, 0, 0)
+}
+
+/*IGNORE!!!!*/
 .freaky {
     font-family: Imperial Script, cursive;
+}
+
+/* SPAN THINGS I DUNNO*/
+
+.up {
+    position: relative;
+    top: -5px;
+}
+
+.down {
+    position: relative;
+    top: 5px;
 }
 
 
@@ -392,3 +453,4 @@ background-color: green;
     cursor: pointer;
     border: 1px solid #333;
 }
+
