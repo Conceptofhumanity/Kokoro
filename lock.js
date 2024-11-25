@@ -1,8 +1,10 @@
+// perhaps get better passwords. 
+// autocomplete told me that the password could be in the url, or the name of the font. worth considering.
 const passwordArray = [
   "deePdarkseCret",
   "iamacatperson",
-  "iREALLYlovecheesecake",
   "women",
+  "iREALLYlovecheesecake",
   "pizzaisoverrated",
   "chance"
 ]
@@ -14,7 +16,7 @@ function unlock1() {
     if (passwordInput === passwordArray[0]) {
         lock.style.pointerEvents = 'auto'; 
         lock.textContent = "Oh. Nice Find.";
-        lock.href = "youtube.com"
+        lock.href = "https://www.youtube.com/watch?v=PWtb991Y6uc"
     } else if (passwordArray.includes(passwordInput) && passwordInput !== passwordArray[0]) {
         lock.textContent = "Right password, wrong spot.";
     } else {
