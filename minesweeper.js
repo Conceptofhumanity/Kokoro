@@ -1,56 +1,43 @@
 /* DONT LOOK AT MY BAD CODE AVERT YOUR EYES */  
 
-const grid = document.querySelector('.grid');
-const size = 10;  
+const grid = document.querySelector('.grid');  /*grid is the div with the class grid*/
+const size = 10; 
 const maxmines = 25; 
-const basemines = 15;
-const cells = []; 
-let gameOver = false
-const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines;
-let firstClick = false
+const basemines = 15; 
+const cells = [];  /*Creates an array to store the cells*/
+let gameOver = false 
+const numberofmines = Math.floor(Math.random() * (maxmines - basemines + 1)) + basemines; /*the number of mines is a random number between maxmines and basemines*/
+let firstClick = false 
 
-/* function placeMines() {
-    let mineCount = 0
+function placeMines2(safeZone) { /*places the mines around a 9x9 area around the first click*/
+    let mineCount = 0 
     while (mineCount < numberofmines) {
-        const randomIndex = Math.floor(Math.random() * cells.length);
-        if (!cells[randomIndex].classList.contains('mine')) {
-            cells[randomIndex].classList.add('mine')
-            mineCount++;
-        }
-    }
-} */
-
-function placeMines2(safeZone) {
-    let mineCount = 0
-    while (mineCount < numberofmines) {
-        const randomIndex = Math.floor(Math.random() * cells.length);
-        if (!cells[randomIndex].classList.contains('mine') && !safeZone.includes(randomIndex)) {
+        const randomIndex = Math.floor(Math.random() * cells.length); /*random number between 0 and the number of cells*/
+        if (!cells[randomIndex].classList.contains('mine') && !safeZone.includes(randomIndex)) { /*if the cell doesn't have the "mine" class and isn't in the safe zone, make it a mine*/
             cells[randomIndex].classList.add('mine');
             mineCount++
     }
 }
 }
 
-function createGrid() {
-    for (let i = 0; i < size * size; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.dataset.id = i;
-        cell.addEventListener('click', () => cellClicked(i));  
-        cell.addEventListener('contextmenu', (event) => {
+function createGrid() { /*creates the grid*/
+    for (let i = 0; i < size * size; i++) { /*for each cell in the grid*/
+        const cell = document.createElement('div'); /*create a div*/
+        cell.classList.add('cell'); /*add the class cell to the div*/
+        cell.dataset.id = i; /*add the id of the cell to the div*/
+        cell.addEventListener('click', () => cellClicked(i));  /*add an event listener to the div that runs cellClicked with the id of the cell as the argument*/
+        cell.addEventListener('contextmenu', (event) => { /*add an event listener to the div that runs cellFlagged with the id of the cell as the argument*/
             event.preventDefault();
             cellFlagged(i);
         });
-
-        grid.appendChild(cell);
-       cells.push(cell);
+        grid.appendChild(cell); /*add the div to the grid*/
+       cells.push(cell); /*add the div to the cells array*/
       
     }
-/*placeMines();*/
 }
 
-function minesOnClick(safeZone) {
-    if (cells.some(cells => cells.classList.contains('mine'))) {
+function minesOnClick(safeZone) { /*places mines upon first click*/
+    if (cells.some(cells => cells.classList.contains('mine'))) { /*stops the function from placing mines every click */
         return;
     } else {
         placeMines2(safeZone) 
@@ -58,21 +45,21 @@ function minesOnClick(safeZone) {
 }
 
 
-function gameEnd() {
+function gameEnd() { /*ends the game*/
     gameOver = true;
     cells.forEach(cell => {
-        if (cell.classList.contains('mine')) {
+        if (cell.classList.contains('mine')) { /*makes mines "exploded"*/
             cell.classList.add("exploded")
         }
-        if (cell.classList.contains('flagged') && !cell.classList.contains('mine')) {
+        if (cell.classList.contains('flagged') && !cell.classList.contains('mine')) { /*removes flagged class from cells that aren't mines*/
             cell.classList.remove('flagged');
         }
     });
 }
 
 function revealNearby(i) { 
-    if(cells[i].classList.contains("mine")) return;
-    const nearbyMines = getNeighboringMines(i)
+    if(cells[i].classList.contains("mine")) return; /*stops the function from revealing mines*/
+    const nearbyMines = getNeighboringMines(i) /*gets the number of mines around the cell*/
     
 
     if (nearbyMines > 0) {
@@ -176,20 +163,11 @@ function checkWin() {
     const revealedCells = document.querySelectorAll('.revealed').length;
     if (revealedCells === (size * size - numberofmines)) {
         Win();
-        alert("good job, you win.");
     }
 }
         
 function Win() {
     gameOver = true;
-    const button = document.createElement("button");
-    button.textContent = "you win. you may go on.";
-    button.addEventListener("click", () => { 
-        button.textContent ="one second..."
-        setTimeout(() => {
-            window.location.href = "page2.html";
-        }, 500);
-    });
-    document.body.appendChild(button);
+    alert('okay, nice job. the password is "iamacatperson", no spaces, no caps. ')
 }
 createGrid();
