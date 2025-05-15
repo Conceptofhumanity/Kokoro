@@ -303,9 +303,10 @@ background-color: green;
 }
 
 /*PAGE 4!!!*/
+/*ig you were using "Xanh Mono" before. not bad font.*/
 .body4 {
     background-color: black;
-    font-family: "Xanh Mono", monospace;
+    font-family: "Wavefont", monospace;
     color: white;
     margin: 0;
     padding: 0;
