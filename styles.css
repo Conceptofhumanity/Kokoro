@@ -342,6 +342,46 @@ background-color: green;
     background-color: rgb(0, 0, 0)
 }
 
+/*PAGE 5!!!!!!! RAAAAAAAAAAH*/
+.body5 {
+    background-color: rgb(6, 119, 0); /*not a good color for a website background but it IS the rgb notation of the number of my favorite pokemon, espurr*/
+    font-family: "", monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header4 {
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.paragraph4 {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.btn4 {
+    background-color: rgb(61, 57, 61);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: ghostwhite;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn4:hover {
+    background-color: rgb(0, 0, 0)
+}
+
+
 /*IGNORE!!!!*/
 .freaky {
     font-family: Imperial Script, cursive;
@@ -455,3 +495,5 @@ background-color: green;
     border: 1px solid #333;
 }
 
+/*list of fonts i like
+<link href="https://fonts.googleapis.com/css2?family=Chela+One&family=Cinzel:wght@400..900&family=Comic+Relief:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&family=Monoton&family=Underdog&family=Wavefont:wght@4..1000&display=swap" rel="stylesheet">*/
