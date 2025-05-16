@@ -303,10 +303,10 @@ background-color: green;
 }
 
 /*PAGE 4!!!*/
-/*ig you were using "Xanh Mono" before. not bad font.*/
+
 .body4 {
     background-color: black;
-    font-family: "Wavefont", monospace;
+    font-family: "Xanh Mono", monospace;
     color: white;
     margin: 0;
     padding: 0;
@@ -343,10 +343,16 @@ background-color: green;
     background-color: rgb(0, 0, 0)
 }
 
+.wavefont {
+ font-family: "Wavefont", cursive;
+ color: white;
+ font-size: 50px;
+ 
+
 /*PAGE 5!!!!!!! RAAAAAAAAAAH*/
 .body5 {
     background-color: rgb(6, 119, 0); /*not a good color for a website background but it IS the rgb notation of the number of my favorite pokemon, espurr*/
-    font-family: "", monospace;
+    font-family: "Luckiest Guy", monospace;
     color: white;
     margin: 0;
     padding: 0;
@@ -354,13 +360,13 @@ background-color: green;
     font-style: normal;
 }
 
-.header4 {
+.header5 {
     color: white;
     text-align: left;
     margin-top: 50px;
 }
 
-.paragraph4 {
+.paragraph5 {
     color: white;
     font-size: 18px;
     line-height: 1.6;
@@ -369,7 +375,7 @@ background-color: green;
     text-align: left;
 }
 
-.btn4 {
+.btn5 {
     background-color: rgb(61, 57, 61);
     color: rgb(255, 255, 255);
     padding: 10px 20px;
@@ -378,7 +384,7 @@ background-color: green;
     font-size: 16px;
 }
 
-.btn4:hover {
+.btn5:hover {
     background-color: rgb(0, 0, 0)
 }
 
