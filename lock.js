@@ -5,8 +5,8 @@ const passwordArray = [
   "iamacatperson",
   "women",
   "iREALLYlovecheesecake",
-  "pizzaisoverrated",
-  "chance"
+  "baconisoverrated",
+  "espurr"
 ]
 
 function unlock1() {
