@@ -1,7 +1,7 @@
 // perhaps get better passwords. 
 // autocomplete told me that the password could be in the url, or the name of the font. worth considering.
 const passwordArray = [
-  "deePdarkseCret",
+  "test",
   "iamacatperson",
   "women",
   "iREALLYlovecheesecake",
