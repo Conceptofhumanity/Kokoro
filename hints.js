@@ -45,3 +45,33 @@ function hint4() {
                     button.textContent = "Then, you click sources, at the top. Then, styles.css. It should be in the left column.";
                  }, 6000);
 }
+
+function hint5() {
+    const button = document.getElementsByClassName("btn5")[0];
+    setTimeout(() => {
+        button.textContent = "the idea is simple. theres that neato font. and ill tell you right now, it contains the password.";
+    }, 1000);
+        setTimeout(() => {
+            button.textContent = "you don't know how to actually get the password? well thats a you problem. speaking of problems..."
+        }, 3000);
+            setTimeout(() => {
+                button.textContent = "here's a tip for copying quotes from things with weird fonts! copy it into your searchbar, and then copy it from THERE into your paper. it will look normal."
+            }, 5000);
+                    setTimeout(() => {
+                        button.textContent = "that does become unfortunate, sometimes, when i want to use a font generator or something for a funky font of my own."
+                    }, 10000);
+
+function hint6() {
+    const button = document.getElementsByClassName("btn6")[0];
+    setTimeout(() => {
+        button.textContent = "okay this is a rough one ill be honest. you may have noticed the background is a different color."
+    }, 1000);
+        setTimeout(() => {
+            button.textContent = "colors can mean a lot of things. they have names, they have several types of codes, rgb, hex, whatever."
+        }, 3000);
+            setTimeout(() => {
+                button.textContent = "these codes, then, can have meanings of their own. numbers can mean myriad things. dates, identification numbers, 39 means miku."
+            }, 5000);
+                setTimeout(() => {
+                    button.textContent = "did you know that each pokemon has its own 4 digit number?"
+                }, 10000);
